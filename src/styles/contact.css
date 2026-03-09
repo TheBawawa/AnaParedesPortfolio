@@ -1,0 +1,110 @@
+@reference "tailwindcss";
+
+.contact-container {
+  @apply flex flex-col gap-3 h-full;
+}
+
+.contact-prompt {
+  @apply m-0 font-bold text-slate-800 text-base;
+  color: var(--text-main);
+}
+
+.contact-form {
+  @apply flex flex-col gap-2.5;
+}
+
+.form-group {
+  @apply flex flex-col gap-[3px] text-left;
+}
+
+.form-group label {
+  @apply text-[0.85rem] font-bold;
+  color: var(--accent-orange);
+}
+
+.form-group input, 
+.form-group textarea {
+  @apply px-3 py-2 rounded-[10px] border border-[var(--window-border)] bg-white/50 font-sans text-[0.95rem] outline-none transition-colors duration-200;
+}
+
+.form-group input:focus, 
+.form-group textarea:focus {
+  border-color: var(--accent-orange);
+}
+
+.form-group textarea {
+  @apply resize-none;
+}
+
+.submit-btn {
+  @apply p-2.5 text-white border-none rounded-[10px] font-bold cursor-pointer transition-all duration-200 mt-1.25;
+  background: var(--accent-orange);
+}
+
+.submit-btn:hover {
+  @apply scale-[1.02] opacity-90;
+}
+
+.submit-btn:active {
+  transform: scale(0.98);
+}
+
+.success-view {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100%;
+  min-height: 300px;
+}
+
+.success-message {
+  text-align: center;
+  padding: 40px;
+  background: white;
+  border-radius: 20px;
+  border: 2px solid var(--window-border);
+  box-shadow: var(--shadow-cozy);
+  max-width: 400px;
+  width: 90%;
+  animation: popIn 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+}
+
+.success-icon {
+  font-size: 3rem;
+  display: block;
+  margin-bottom: 20px;
+}
+
+.success-message h2 {
+  color: var(--accent-orange);
+  margin-bottom: 10px;
+  font-size: 1.5rem;
+}
+
+.success-message p {
+  color: var(--text-main);
+  opacity: 0.8;
+  margin-bottom: 30px;
+  line-height: 1.5;
+}
+
+@keyframes popIn {
+  0% { transform: scale(0.8); opacity: 0; }
+  100% { transform: scale(1); opacity: 1; }
+}
+
+@media (max-width: 600px) {
+}
+
+.social-links-row {
+  @apply flex justify-center gap-5 pb-3 border-b border-[var(--window-border)];
+}
+
+.social-icon {
+  @apply flex items-center gap-1.5 no-underline font-medium text-[0.85rem] transition-colors duration-200;
+  color: var(--text-main);
+}
+
+.social-icon:hover {
+  color: var(--accent-yellow);
+}

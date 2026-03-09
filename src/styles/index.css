@@ -1,0 +1,70 @@
+@import url('https://fonts.googleapis.com/css2?family=Zen+Kaku+Gothic+New:wght@300;400;500;700&display=swap');
+@import "tailwindcss";
+
+:root {
+  --window-bg: rgba(255, 255, 255, 0.85);
+  --window-border: rgba(255, 255, 255, 0.3);
+  --text-main: #334155;
+  --accent-orange: #E87EA1;
+  --accent-yellow: #EE2677;
+  --accent-pink: #CB769E;
+  --shadow-cozy: 0 10px 25px -5px rgba(0, 0, 0, 0.1), 0 8px 10px -6px rgba(0, 0, 0, 0.1);
+  --font-main: 'Zen Kaku Gothic New', "Segoe UI", Roboto, sans-serif;
+}
+
+html, body {
+  margin: 0;
+  padding: 0;
+  height: 100%;
+  width: 100%;
+  overflow: hidden;
+  font-family: var(--font-main);
+  color: var(--text-main);
+}
+
+.custom-cursor {
+  position: fixed;
+  width: 20px;
+  height: 20px;
+  background: var(--accent-orange);
+  border-radius: 50%;
+  pointer-events: none;
+  z-index: 9999;
+  transform: translate(-50%, -50%);
+  transition: transform 0.1s ease-out, opacity 0.2s ease;
+  box-shadow: 0 0 10px rgba(251, 146, 60, 0.5);
+}
+
+body {
+  background-image: url("../assets/portfoliowallpaper.avif"); /* Will be created */
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed;
+}
+
+.title {
+  text-align: left;
+}
+
+.title h1 {
+  font-size: 1.5rem;
+  margin: 0;
+}
+
+.title h2 {
+  font-size: 1rem;
+  margin: 0;
+  opacity: 0.8;
+}
+
+/* Links */
+.Links {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  gap: 20px;
+  color: #CB769E;
+  text-decoration: underline;
+}
+

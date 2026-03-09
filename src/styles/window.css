@@ -1,0 +1,51 @@
+@reference "tailwindcss";
+
+.window-overlay {
+  @apply fixed inset-0 flex items-center justify-center p-5;
+  z-index: 100;
+  pointer-events: none;
+}
+
+.window-container {
+  @apply pointer-events-auto w-[90%] max-w-[600px] h-[70%] max-h-[500px] flex flex-col overflow-hidden;
+  background: var(--window-bg);
+  backdrop-filter: blur(10px);
+  border: 1px solid var(--window-border);
+  border-radius: 12px;
+  box-shadow: var(--shadow-cozy);
+  animation: window-pop 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+}
+
+@keyframes window-pop {
+  from { transform: scale(0.9); opacity: 0; }
+  to { transform: scale(1); opacity: 1; }
+}
+
+.window-header {
+  @apply flex items-center justify-between px-4 py-2 text-white;
+  background: var(--accent-orange);
+  border-bottom: 1px solid var(--window-border);
+}
+
+.window-title {
+  @apply font-bold text-[0.95rem] text-white;
+}
+
+.close-btn {
+  @apply bg-transparent border-none text-2xl text-white cursor-pointer leading-none px-1 transition-opacity duration-200;
+}
+
+.close-btn:hover {
+  @apply opacity-80;
+}
+
+.window-content {
+  @apply flex-1 overflow-y-auto p-6;
+}
+
+/* Responsiveness */
+@media (max-width: 600px) {
+  .window-container {
+    @apply w-[95%] h-[90%];
+  }
+}

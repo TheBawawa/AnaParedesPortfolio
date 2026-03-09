@@ -1,0 +1,97 @@
+.ProjectTab {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 20px;
+  gap: 40px; /* Increased gap between sections */
+  font-family: var(--font-main);
+  max-height: 100%;
+  overflow-y: auto; /* Added scrolling for the tab itself if content overflows */
+}
+
+.ProjectSection {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+  gap: 20px;
+}
+
+.ProjectHeader h1 {
+  margin: 0;
+  color: var(--accent-orange);
+  font-size: 1.5rem;
+}
+
+.ProjectsContainer {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  width: 100%;
+  gap: 15px;
+}
+
+.Projects {
+  display: flex;
+  flex-direction: row;
+  overflow: hidden;
+  width: 100%;
+  gap: 15px;
+  justify-content: center;
+}
+
+.projectItem {
+  flex: 0 0 calc(33.333% - 10px);
+  max-width: calc(33.333% - 10px);
+  transition: transform 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+}
+
+.projectItem:hover {
+  transform: scale(1.08);
+}
+
+.projectImage {
+  width: 100%;
+  height: auto;
+  aspect-ratio: 16 / 9;
+  object-fit: cover;
+  border-radius: 12px;
+  border: 2px solid var(--window-border);
+  box-shadow: var(--shadow-cozy);
+}
+
+.arrows {
+  width: 32px;
+  height: 32px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: white;
+  border-radius: 50%;
+  box-shadow: var(--shadow-cozy);
+  cursor: pointer;
+  transition: transform 0.2s, background 0.2s;
+}
+
+.arrows:hover {
+  transform: scale(1.1);
+  background: var(--accent-yellow);
+}
+
+.arrows:active {
+  transform: scale(0.9);
+}
+
+.section-divider {
+  width: 80%;
+  height: 2px;
+  background: linear-gradient(to right, transparent, var(--window-border), transparent);
+  margin: 10px 0;
+}
+
+@media (max-width: 600px) {
+  .projectItem {
+    flex: 0 0 100%;
+    max-width: 100%;
+  }
+}

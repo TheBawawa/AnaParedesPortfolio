@@ -1,0 +1,24 @@
+@reference "tailwindcss";
+
+.app-icon {
+  @apply flex flex-col items-center cursor-pointer transition-transform duration-200 ease-in-out select-none;
+}
+
+.app-icon:hover {
+  @apply scale-[1.05];
+}
+
+.app-icon:active {
+  @apply scale-[0.98];
+}
+
+.icon-box {
+  @apply w-16 h-16 bg-white rounded-2xl flex items-center justify-center text-[2rem] mb-2 border-2 border-[var(--window-border)];
+  box-shadow: var(--shadow-cozy);
+}
+
+.icon-label {
+  @apply text-[0.9rem] font-medium;
+  color: var(--text-main);
+  text-shadow: 0 1px 2px rgba(255, 255, 255, 0.8);
+}

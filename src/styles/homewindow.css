@@ -1,0 +1,24 @@
+@reference "tailwindcss";
+
+.home-content {
+  @apply flex flex-col items-center justify-center w-[90%] max-w-[800px] h-[500px] text-center p-10 mx-auto;
+  background: var(--window-bg);
+  backdrop-filter: blur(12px);
+  border: 2px solid white;
+  border-radius: 24px;
+  box-shadow: 0 20px 50px rgba(0, 0, 0, 0.1);
+}
+
+.home-icons-row {
+  @apply flex flex-row gap-[30px] justify-center mt-[30px];
+}
+
+.home-title {
+  @apply text-[2.5rem] mb-[10px] font-bold;
+  color: var(--accent-orange);
+}
+
+.home-subtitle {
+  @apply text-[1.2rem] opacity-80;
+  color: var(--text-main);
+}

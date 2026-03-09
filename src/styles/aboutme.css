@@ -1,0 +1,128 @@
+.AboutMe {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 15px 25px;
+  background: var(--window-bg);
+  border-radius: 12px;
+  gap: 25px;
+  font-family: var(--font-main);
+  color: var(--text-main);
+}
+
+.top-section {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  gap: 30px;
+  width: 100%;
+}
+
+.AboutMe .HeaderInfo {
+  flex: 1;
+  text-align: left;
+}
+
+.AboutMe h1 {
+  margin: 0;
+  color: var(--accent-orange);
+  font-size: 1.6rem;
+}
+
+.AboutMe h2 {
+  margin: 2px 0 12px 0;
+  color: var(--accent-pink);
+  font-size: 1.1rem;
+}
+
+.AboutMe p {
+  margin: 0 0 8px 0;
+  line-height: 1.5;
+  font-size: 0.95rem;
+}
+
+.AboutMe .profilePicture {
+  width: 130px;
+  height: 130px;
+  aspect-ratio: 1 / 1;
+  object-fit: cover;
+  border-radius: 50%;
+  border: 3px solid var(--accent-yellow);
+  box-shadow: var(--shadow-cozy);
+}
+
+.skills-container {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  width: 100%;
+  border-top: 1px solid rgba(0,0,0,0.05);
+  padding-top: 15px;
+}
+
+.skills-row {
+  display: flex;
+  flex-direction: row;
+  gap: 30px;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+.skill-group {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  align-items: center;
+}
+
+.skill-group h3 {
+  font-size: 0.8rem;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  color: var(--text-muted, #888);
+  margin: 0;
+}
+
+.skill-boxes {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  justify-content: center;
+}
+
+.skill-box {
+  padding: 5px 12px;
+  background: white;
+  border: 1px solid #e0e0e0;
+  border-radius: 6px;
+  font-size: 0.85rem;
+  color: #444;
+  box-shadow: 0 1px 2px rgba(0,0,0,0.05);
+  transition: transform 0.2s, box-shadow 0.2s, background 0.2s;
+}
+
+.skill-box:hover {
+  transform: translateY(-2px);
+  box-shadow: var(--shadow-cozy);
+  background: var(--accent-yellow-light, #fffbe6);
+  border-color: var(--accent-yellow);
+}
+
+@media (max-width: 768px) {
+  .top-section {
+    flex-direction: column;
+    text-align: center;
+    gap: 15px;
+  }
+  
+  .AboutMe .HeaderInfo {
+    text-align: center;
+  }
+  
+  .skills-row {
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+  }
+}
