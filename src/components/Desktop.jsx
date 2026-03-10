@@ -13,8 +13,8 @@ const Desktop = () => {
 
   const handleResumeDownload = () => {
     Object.assign(document.createElement('a'), {
-      href: '/portfoliowallpaper.avif',
-      download: 'Ana_Paredes_Resume.pdf'
+      href: '../Resume-Ana-Paredes-2026.pdf',
+      download: 'Resume-Ana-Paredes.pdf'
     }).click();
   };
 
