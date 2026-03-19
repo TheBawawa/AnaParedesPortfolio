@@ -3,7 +3,7 @@ import '../styles/appicon.css';
 import aboutIcon from '../assets/roundheart.png';
 import resumeIcon from '../assets/files.png';
 import projectsIcon from '../assets/reminders-hearts.png';
-import contactIcon from '../assets/contacts.png';
+import contactIcon from '../assets/chatbubble.png';
 
 const AppIcon = ({ label, onClick, type, onMouseEnter, onMouseLeave }) => {
   const icons = {
