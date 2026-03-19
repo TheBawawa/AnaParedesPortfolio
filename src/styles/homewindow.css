@@ -22,3 +22,26 @@
   @apply text-[1.2rem] opacity-80;
   color: var(--text-main);
 }
+
+.home-social-links {
+  @apply flex flex-row gap-[20px] justify-center mt-[35px];
+}
+
+.home-social-icon {
+  @apply flex items-center gap-[6px] text-[0.9rem] text-[#666] transition-all duration-200 no-underline font-medium;
+}
+
+.home-social-icon:hover {
+  color: var(--accent-orange);
+  @apply transform -translate-y-[2px];
+}
+
+.home-social-icon span {
+  @apply text-[1rem];
+}
+
+.social-img-icon {
+  width: 20px;
+  height: 20px;
+  object-fit: contain;
+}

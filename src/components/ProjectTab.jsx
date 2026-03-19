@@ -14,16 +14,16 @@ import project2 from '../assets/project2.png';
 
 
 const GAME_PROJECTS = [
-  { src: game1, link: "https://thebawawa.itch.io/try-to-survive" },
-  { src: game2, link: "https://thebawawa.itch.io/beat-the-tank" },
-  { src: game3, link: "https://thebawawa.itch.io/apocalypse" },
-  { src: game4, link: "https://thebawawa.itch.io/crunchy-pinball" },
-  { src: game5, link: "https://thebawawa.itch.io/gogetthemkitty" },
+  { src: game1, link: "https://thebawawa.itch.io/try-to-survive", title: "Try To Survive", description: "Top down puzzle game. Collect the fruits to open the door and escape!" },
+  { src: game2, link: "https://thebawawa.itch.io/beat-the-tank", title: "Beat The Tank", description: "Action 2D game. Dodge bullets, and shoot back to destroy the enemy tank!" },
+  { src: game3, link: "https://thebawawa.itch.io/apocalypse", title: "Apocalypse", description: "Survival 2D shooter.  You are now a survivor! Use your wepon to survive the day." },
+  { src: game4, link: "https://thebawawa.itch.io/crunchy-pinball", title: "Crunchy Pinball", description: "A classic pinball experience with crunchy sound effects in a candyworld!" },
+  { src: game5, link: "https://thebawawa.itch.io/gogetthemkitty", title: "Go Get Them Kitty", description: "2D platformer where you play as an adventurous feline! Jump, collect yarn, and explore the house." },
 ];
 
 const APP_PROJECTS = [
-  { src: project1, link: "https://wiki-val.vercel.app/" },
-  { src: project2, link: "https://re-craft.vercel.app/" },
+  { src: project1, link: "https://wiki-val.vercel.app/", title: "WikiVal", description: "A data visualization  for Valorant agents, maps, and weapons with a sleek, minimalistic, and responsive UI." },
+  { src: project2, link: "https://re-craft.vercel.app/", title: "ReCraft", description: "Social media recycling application to help you connect, and share your crafts with recyclable materials." },
 ];
 
 const ProjectSection = ({ title, projects }) => {
@@ -36,9 +36,7 @@ const ProjectSection = ({ title, projects }) => {
     );
   };
 
-  const visible = Array.from({ length: Math.min(projects.length, 4) }, (_, i) => 
-    projects[(index + i) % projects.length]
-  );
+  const visible = [projects[index]];
 
   return (
     <div className="ProjectSection">
@@ -47,10 +45,14 @@ const ProjectSection = ({ title, projects }) => {
         <Image src={arrowL} alt="Left" className="arrows" onClick={() => scroll('left')} />
         <div className="Projects">
           {visible.map((p, i) => (
-            <div key={i} className="projectItem">
-              <a href={p.link} target="_blank" rel="noreferrer">
+            <div key={index} className="projectItem">
+              <a href={p.link} target="_blank" rel="noreferrer" className="projectLink">
                 <Image src={p.src} alt="project" className="projectImage" />
               </a>
+              <div className="projectInfo">
+                <h2 className="projectTitle">{p.title}</h2>
+                <p className="projectDesc">{p.description}</p>
+              </div>
             </div>
           ))}
         </div>

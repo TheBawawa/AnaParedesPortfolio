@@ -1,12 +1,16 @@
 import React from 'react';
 import '../styles/appicon.css';
+import aboutIcon from '../assets/roundheart.png';
+import resumeIcon from '../assets/files.png';
+import projectsIcon from '../assets/reminders-hearts.png';
+import contactIcon from '../assets/contacts.png';
 
 const AppIcon = ({ label, onClick, type, onMouseEnter, onMouseLeave }) => {
   const icons = {
-    about: '👤',
-    resume: '📄',
-    projects: '🕹️',
-    contact: '📱'
+    about: aboutIcon,
+    resume: resumeIcon,
+    projects: projectsIcon,
+    contact: contactIcon
   };
 
   return (
@@ -17,7 +21,7 @@ const AppIcon = ({ label, onClick, type, onMouseEnter, onMouseLeave }) => {
       onMouseLeave={onMouseLeave}
     >
       <div className="icon-box">
-        {icons[type] || '📄'}
+        <img src={icons[type] || resumeIcon} alt={label} className="app-icon-img" />
       </div>
       <span className="icon-label">{label}</span>
     </div>

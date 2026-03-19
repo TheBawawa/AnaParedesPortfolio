@@ -108,3 +108,23 @@
 .social-icon:hover {
   color: var(--accent-yellow);
 }
+
+.email-display-row {
+  @apply flex items-center justify-center gap-[10px];
+}
+
+.social-img-icon {
+  width: 22px;
+  height: 22px;
+  object-fit: contain;
+}
+
+.email-text {
+  @apply font-medium text-[0.95rem] transition-colors duration-200;
+  color: var(--text-main);
+  text-decoration: none;
+}
+
+.email-text:hover {
+  color: var(--accent-orange);
+}

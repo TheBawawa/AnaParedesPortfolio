@@ -52,14 +52,59 @@
   box-shadow: var(--shadow-cozy);
 }
 
-.skills-container {
+.section-container {
   display: flex;
   flex-direction: column;
   gap: 15px;
   width: 100%;
   border-top: 1px solid rgba(0,0,0,0.05);
   padding-top: 15px;
+  align-items: center;
 }
+
+.section-title {
+  font-size: 1.1rem;
+  color: var(--accent-pink);
+  margin: 0 0 10px 0;
+  text-transform: uppercase;
+  letter-spacing: 1.5px;
+}
+
+.education-info {
+  text-align: center;
+  font-size: 0.95rem;
+}
+
+.education-info p {
+  margin: 4px 0;
+}
+
+.section-container.left-align {
+  align-items: flex-start;
+  text-align: left;
+}
+
+.section-container.left-align .education-info {
+  text-align: left;
+}
+
+.languages-text {
+  color: var(--text-main);
+  margin: 0;
+  font-size: 0.95rem;
+}
+
+.languages-text-small {
+  color: var(--text-muted, #888);
+  font-size: 0.85rem;
+  font-style: italic;
+  margin: 5px 0 0 10px;
+}
+
+.skills-container {
+  width: 100%;
+}
+
 
 .skills-row {
   display: flex;

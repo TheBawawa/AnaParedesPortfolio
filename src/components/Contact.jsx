@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import '../styles/contact.css';
+import emailIcon from '../assets/logos_google-gmail.png';
 
 const INITIAL_STATE = { email: '', subject: '', message: '' };
 
@@ -44,16 +45,9 @@ const Contact = () => {
 
   return (
     <div className="contact-container">
-      <div className="social-links-row">
-        {[
-          { label: 'LinkedIn', url: 'https://www.linkedin.com/in/ana-paredes-2850b51a6/', icon: '🔗' },
-          { label: 'GitHub', url: 'https://github.com/TheBawawa', icon: '💻' },
-          { label: 'Email', url: 'mailto:anagabrielaparedes324@gmail.com', icon: '📧' }
-        ].map(link => (
-          <a key={link.label} href={link.url} target="_blank" rel="noopener noreferrer" className="social-icon" title={link.label}>
-            <span>{link.icon}</span> {link.label}
-          </a>
-        ))}
+      <div className="social-links-row email-display-row">
+        <img src={emailIcon} alt="Email" className="social-img-icon" />
+        <a href="mailto:anagabrielaparedes324@gmail.com" className="email-text">anagabrielaparedes324@gmail.com</a>
       </div>
 
       <p className="contact-prompt">Send me quick message!</p>
